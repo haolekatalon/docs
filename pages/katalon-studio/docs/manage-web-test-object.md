@@ -153,61 +153,7 @@ Once finished, click **Save** to add the object to **Object Repository** as 
 
 ## Visual Object Recognition
 
-**Requirements**
-
-* Your Katalon Studio version must be 7.2.2 or later.
-* You need an active Katalon Studio Enterprise license.
-
-Image-based object recognition in web testing allows using an image representing an object to find that object during test execution. This feature proves helpful in case the web elements retain their appearances even though the underlying HTML structures have changed.
-
-**Given** that a web element has the screenshot property.\
-**When** Katalon fails to find a web element by its selected locator.\
-**Then** Katalon tries using the associated screenshot to find the web element.
-
-Using the image-based locating algorithm, Katalon Studio identifies the recognition area on the current screen based on the **target** screenshot. However, because typically a viewport of a browser is limited, what is present on the screen is also limited. Katalon attempts to scroll the page down and apply the image-based locating algorithm repeatedly. The final web element stored in the **Matched Elements** folder is the one that resembles the screenshot the most.
-
-<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/image-based-web-elements-recognition/fallback-strategy.gif" width="" height="">
-
-### Enable Image-based object recognition
-
-**From 7.6 onwards**
-
-Image-based object recognition is enabled by default for web test execution in **Project > Settings > Self-Healing > Web UI > Test Execution** ([See Self-healing Tests](https://docs.katalon.com/katalon-studio/docs/self-healing.html)).
-
-<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/image-based-web-elements-recognition/image-enabled.png" width="" height="">
-
-**Before 7.6**
-
-By default, image-based object recognition is disabled in Project Settings. Please go to **Project > Settings > Execution** and check **Enable Image Recognition** to turn on this fallback strategy.
-
-<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/image-based-web-elements-recognition/enable.png" width="" height="">
-
-### Capture screenshot and create screenshot property of an object
-
-The ingredients required for the image-based object location to work include:
-
-* Target screenshots of a web element
-* The screenshot property of that element
-
-There are two ways to create the required ingredients:
-
-* [Using the built-in feature in Web Recorder and Spy](https://docs.katalon.com/katalon-studio/docs/web-image-based-object-recognition.html#use-built-in-tool)
-* [Using a manual way](https://docs.katalon.com/katalon-studio/docs/web-image-based-object-recognition.html#use-other-tools)
-
-In Tests Explorer, under the **Screenshots** folder, you can see the **Matched Elements** and **Targets** folders.
-
-* The **Matched Elements** folder contains objects that are located by Katalon Studio based on the target images.
-* The **Targets** folder is for containing the images that Katalon Studio uses for locating objects.
-  <img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/image-based-web-elements-recognition/folders.png" width="493" height="">
-
-> For a sample project, please download [here](https://github.com/katalon-studio-samples/image-recognition-web)
-
-### Factors Affecting Image Comparison
-
-**Screen Resolution**: The screen resolutions of tests executing machines and screenshots capturing machines may affect the effectiveness of image comparison. We recommende capture screenshots and execute tests on the same machine for a better result.
-
-**Capture Tool**: To capture screenshots associated with your preferred web elements, we recommend using the built-in screen-capturing feature in Web Recorder and Spy Tools. Particularly, on the expanded view after clicking **Show Captured Objects**, select the **Add Screenshot** button on the bottom right corner.
-<img src="https://github.com/katalon-studio/docs-images/raw/master/katalon-studio/docs/image-based-web-elements-recognition/recorder.png" width="" height="">
+Image locator allows you to identify a test object with an image and perform web image-based testing. [Learn more](https://docs.katalon.com/katalon-studio/docs/web-image-based-testing.html)
 
 ## Work with Shadow DOM Objects
 
